@@ -21,15 +21,15 @@ echo "Progress..." | lolcat
 sleep 3
 cd
 
-wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/myridwan/VVIP/ipuk/websocket/dropbear-ws.py
-wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/myridwan/VVIP/ipuk/websocket/ws-stunnel
+wget -O /usr/local/bin/ws-dropbear https://github.com/AdaraS14/fixSC-RDWN/blob/main/SCrdwn/websocket/dropbear-ws.py
+wget -O /usr/local/bin/ws-stunnel https://github.com/AdaraS14/fixSC-RDWN/blob/main/SCrdwn/websocket/ws-stunnel
 
 chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-stunnel
 
-wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/myridwan/VVIP/ipuk/websocket/service-wsdropbear && chmod +x /etc/systemd/system/ws-dropbear.service
+wget -O /etc/systemd/system/ws-dropbear.service https://github.com/AdaraS14/fixSC-RDWN/blob/main/SCrdwn/websocket/service-wsdropbear && chmod +x /etc/systemd/system/ws-dropbear.service
 
-wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/myridwan/VVIP/ipuk/websocket/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
+wget -O /etc/systemd/system/ws-stunnel.service https://github.com/AdaraS14/fixSC-RDWN/blob/main/SCrdwn/websocket/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
 
 systemctl daemon-reload
 systemctl enable ws-dropbear.service
